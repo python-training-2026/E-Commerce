@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Back | Login</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Glassmorphic Card -->
+    <div class="card-container">
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">Welcome Back</h2>
+                <p class="card-subtitle">Sign in to your account to continue</p>
+            </div>
+
+            <form id="loginForm" autocomplete="off">
+                <!-- Email Input -->
+                <div class="form-group">
+                    <input type="email" id="login_email" class="form-input" placeholder="Email Address" required>
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                </div>
+
+                <!-- Password Input -->
+                <div class="form-group">
+                    <input type="password" id="login_password" class="form-input" placeholder="Password" required>
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('login_password', this)">
+                        <i class="fa-solid fa-eye"></i>
+                    </button>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary" id="submitBtn">
+                    <span class="btn-text">Login</span>
+                    <div class="spinner"></div>
+                </button>
+            </form>
+
+            <!-- Card Footer -->
+            <div class="card-footer" style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+                <div>Don't have an account? <a href="/register-page" class="card-link">Register</a></div>
+                <a href="/" class="card-link" style="font-size: 0.85rem; opacity: 0.8; display: flex; align-items: center; gap: 6px;">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Home
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

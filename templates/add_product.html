@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product | NextGen Store</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <i class="fa-solid fa-cube"></i>
+            <span>NextGen Store</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/products-page" class="nav-link">Products</a></li>
+            <li><a href="/add-product-page" class="nav-link active">Add Product</a></li>
+            <li><span class="nav-link" id="navUser" style="color: #a5b4fc;"><i class="fa-solid fa-user"></i> User</span></li>
+            <li><button onclick="logout()" class="btn-nav-action btn-logout">Logout</button></li>
+        </ul>
+    </nav>
+
+    <!-- Glassmorphic Card Container -->
+    <div class="card-container has-navbar">
+        <div class="card" style="width: 100%; max-width: 500px;">
+            <div class="card-header">
+                <h2 class="card-title">Add New Product</h2>
+                <p class="card-subtitle">Fill in the details to list a new product in the store</p>
+            </div>
+
+            <form id="productForm" autocomplete="off" enctype="multipart/form-data">
+                <!-- Product Name -->
+                <div class="form-group">
+                    <input type="text" id="product_name" class="form-input" placeholder="Product Name" required>
+                    <i class="fa-solid fa-tag input-icon"></i>
+                </div>
+
+                <!-- Price & Quantity (Flex row) -->
+                <div style="display: flex; gap: 15px; margin-bottom: 22px;">
+                    <!-- Price -->
+                    <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                        <input type="number" id="product_price" class="form-input" placeholder="Price ($)" step="0.01" min="0" required style="padding-left: 40px;">
+                        <i class="fa-solid fa-dollar-sign input-icon" style="left: 14px;"></i>
+                    </div>
+                    <!-- Quantity -->
+                    <div class="form-group" style="flex: 1; margin-bottom: 0;">
+                        <input type="number" id="product_qty" class="form-input" placeholder="Quantity" min="0" required style="padding-left: 40px;">
+                        <i class="fa-solid fa-boxes-stacked input-icon" style="left: 14px;"></i>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div class="form-group">
+                    <textarea id="product_desc" class="form-input" placeholder="Product Description" required style="min-height: 100px; resize: vertical; padding-left: 46px; padding-top: 15px;"></textarea>
+                    <i class="fa-solid fa-align-left input-icon" style="top: 25px; transform: none;"></i>
+                </div>
+
+                <!-- Drag & Drop Image Upload -->
+                <div class="upload-dropzone" id="uploadDropzone">
+                    <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                    <div class="upload-text">
+                        Drag & drop image here or <strong>browse</strong>
+                    </div>
+                    <input type="file" id="product_image" class="file-input" accept="image/*" required>
+                    
+                    <!-- Image Preview Overlay -->
+                    <div class="upload-preview" id="uploadPreview">
+                        <img src="" alt="Product Preview" id="previewImg">
+                        <button type="button" class="btn-remove-preview" id="btnRemovePreview">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary" id="submitBtn">
+                    <span class="btn-text">Add Product</span>
+                    <div class="spinner"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | NextGen Store</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <i class="fa-solid fa-cube"></i>
+            <span>NextGen Store</span>
+        </a>
+        <ul class="nav-links">
+            <!-- Populated dynamically via script.js -->
+        </ul>
+    </nav>
+
+    <!-- Cart Layout Container -->
+    <div class="gallery-container has-navbar">
+        <div class="gallery-header">
+            <div class="gallery-title-wrapper">
+                <h1 class="gallery-title">Shopping Cart</h1>
+                <p class="gallery-subtitle">Review and manage your selected products before checking out</p>
+            </div>
+            <button class="btn-secondary" onclick="clearCart()" style="padding: 10px 20px; font-size: 0.9rem;">
+                <i class="fa-solid fa-trash-arrow-up"></i> Clear Cart
+            </button>
+        </div>
+
+        <div class="cart-layout">
+            <!-- Cart Items Grid List -->
+            <div class="cart-items-section" id="cartGrid">
+                <!-- Loading Shimmer/Spinner State -->
+                <div class="empty-state" style="animation: none;">
+                    <i class="fa-solid fa-circle-notch fa-spin empty-icon" style="color: var(--primary-color);"></i>
+                    <h3 class="empty-title">Loading Cart</h3>
+                    <p class="empty-desc">Retrieving your items...</p>
+                </div>
+            </div>
+
+            <!-- Summary Panel -->
+            <div class="cart-summary-section">
+                <div class="summary-card">
+                    <h3 class="summary-title">Order Summary</h3>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="cartSubtotal">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span id="cartShipping">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-row" style="font-size: 0.85rem; opacity: 0.7; margin-bottom: 24px;">
+                        <span>* Free Shipping on orders over $100</span>
+                    </div>
+                    
+                    <div class="summary-row total">
+                        <span>Total Amount</span>
+                        <span id="cartTotal">$0.00</span>
+                    </div>
+
+                    <button class="btn-primary" id="cartCheckoutBtn" disabled style="opacity: 0.5; cursor: not-allowed;">
+                        Proceed to Checkout <i class="fa-solid fa-credit-card" style="margin-left: 8px;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+fastapi 
+uvicorn 
+sqlalchemy 
+asyncpg 
+psycopg2-binary 
+python-dotenv 
+passlib[bcrypt]
+
+pydantic[email]
+
+python-multipart
+jinja2
+
+# pip install jinja2
+
+# pip install python-multipart

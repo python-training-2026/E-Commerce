@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextGen Store | Experience the Future of Retail</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- Animated Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="/" class="nav-logo">
+            <i class="fa-solid fa-cube"></i>
+            <span>NextGen Store</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="/" class="nav-link active">Home</a></li>
+            <li><a href="/products-page" class="nav-link">Products</a></li>
+            <li><a href="/login-page" class="btn-nav-action btn-nav-login">Sign In</a></li>
+            <li><a href="/register-page" class="btn-nav-action btn-nav-register">Register</a></li>
+        </ul>
+    </nav>
+
+    <!-- Landing Main Content -->
+    <div class="landing-container has-navbar">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-badge">
+                <i class="fa-solid fa-sparkles"></i> Welcoming the Future
+            </div>
+            <h1 class="hero-title">
+                Experience E-Commerce <br>Redefined with Motion.
+            </h1>
+            <p class="hero-subtitle">
+                A sleek, highly interactive dashboard that allows you to manage and showcase your products with beautiful, fluid animations and a premium glassmorphic interface.
+            </p>
+            <div class="hero-buttons">
+                <a href="/register-page" class="btn-primary btn-primary-large">
+                    Get Started <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="/products-page" class="btn-secondary">
+                    View Gallery <i class="fa-solid fa-images"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <h3 class="feature-title">Fluid Animations</h3>
+                <p class="feature-desc">
+                    Every transition, hover state, and page load is crafted with micro-animations to create a premium, immersive user experience.
+                </p>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                </div>
+                <h3 class="feature-title">Drag & Drop Upload</h3>
+                <p class="feature-desc">
+                    Easily add new products by dragging and dropping images, complete with real-time preview and instant backend synchronization.
+                </p>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon-wrapper">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <h3 class="feature-title">FastAPI Backend</h3>
+                <p class="feature-desc">
+                    Powered by a robust, asynchronous Python backend, delivering lightning-fast response times and secure user authentication.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="/static/script.js"></script>
+</body>
+</html>
